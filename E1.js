@@ -5,4 +5,3 @@ function maiorString(a, b) {
 console.log(maiorString("aaa", "bbbb"));
 console.log(maiorString("aaaa", "bbb"));
 console.log(maiorString("aaaa", "bbbb"));
-
