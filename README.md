@@ -67,3 +67,9 @@ Utilização dos métodos `.toUpperCase()` + `.slice(1)` para deixar a primeira 
 Imprime a soma das idades dos objtos do Array que foi dado.
 
 Utilização do método `reduce` como proposto no exercício.
+
+
+### E9.js:
+Imprime um objeto caso tenha alguém com menos de 25 anos.
+
+Utilização do método `.find` para buscar a primeira pessoa que tenha menos de 25 anos, retornando o primeiro que aparecer, caso não tenha retorna `undefined`
