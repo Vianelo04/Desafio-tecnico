@@ -61,3 +61,9 @@ Imprime uma mensagem de saudações junto dos nomes (com a primeira letra maiús
 Utilização de `for...of` para iterar.
 
 Utilização dos métodos `.toUpperCase()` + `.slice(1)` para deixar a primeira letra do nome maiúscula.
+
+
+### E8.js:
+Imprime a soma das idades dos objtos do Array que foi dado.
+
+Utilização do método `reduce` como proposto no exercício.
