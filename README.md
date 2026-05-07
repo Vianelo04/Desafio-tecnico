@@ -72,4 +72,10 @@ Utilização do método `reduce` como proposto no exercício.
 ### E9.js:
 Imprime um objeto caso tenha alguém com menos de 25 anos.
 
-Utilização do método `.find` para buscar a primeira pessoa que tenha menos de 25 anos, retornando o primeiro que aparecer, caso não tenha retorna `undefined`
+Utilização do método `.find` para buscar a primeira pessoa que tenha menos de 25 anos, retornando o primeiro que aparecer, caso não tenha,retorna `undefined`.
+
+
+### E10.js:
+Imprime todos em que a idade é menor que 30 anos.
+
+Utilização do método `.filter` para filtrar e retornar todos que têm menos de 30 anos, caso não tenha, retorna um array vazio `[]`.
