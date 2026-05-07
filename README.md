@@ -45,3 +45,11 @@ Criação de uma função para substituir os números de uma frase utilizando do
 Utilização do "Object.entries" para transformar o dicionário em Array e o "for" para percorrer o Array, repetindo a iteração com os pares.
 
 Input para testar a substituição dos números pelas letras do dicionário.
+
+
+### E6.js:
+Criação de uma função que usa o serviço de API REST de CEP(ViaCEP).
+
+Utilização do `fetch` e `async/await` para requisição HTTPS, `json()` para resposta.
+
+Input para testar com meu CEP e número da minha casa.
