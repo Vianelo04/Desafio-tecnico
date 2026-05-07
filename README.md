@@ -53,3 +53,11 @@ Criação de uma função que usa o serviço de API REST de CEP(ViaCEP).
 Utilização do `fetch` e `async/await` para requisição HTTPS, `json()` para resposta.
 
 Input para testar com meu CEP e número da minha casa.
+
+
+### E7.js:
+Imprime uma mensagem de saudações junto dos nomes (com a primeira letra maiúscula) e sobrenomes de cada objeto dados pelo Array.
+
+Utilização de `for...of` para iterar.
+
+Utilização dos métodos `.toUpperCase()` + `.slice(1)` para deixar a primeira letra do nome maiúscula.
