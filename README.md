@@ -79,3 +79,11 @@ Utilização do método `.find` para buscar a primeira pessoa que tenha menos de
 Imprime todos em que a idade é menor que 30 anos.
 
 Utilização do método `.filter` para filtrar e retornar todos que têm menos de 30 anos, caso não tenha, retorna um array vazio `[]`.
+
+
+### E11.js:
+Ordena o array de forma decrescente por `idade`, caso haja empate, desempata pelo `id`.
+
+Utilização do método `.sort()` para fazer a ordenação de forma decrescente das idades.
+
+Utilização de `if` e `else` para condições de desempate pelo `id`.
