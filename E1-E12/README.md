@@ -4,7 +4,7 @@ Resolução dos exercícios de 1 a 12 em JavaScript.
 
 ## Como executar: 
 Cada exercício esta em um arquivo separado com nome de E*.js (* = ao número do exercício). 
-Para executar, basta rodar no terminal "node e*.js".
+Para executar, basta rodar no terminal "node E1-E12/e*.js".
 
 
 ### E1.js:
@@ -87,3 +87,11 @@ Ordena o array de forma decrescente por `idade`, caso haja empate, desempata pel
 Utilização do método `.sort()` para fazer a ordenação de forma decrescente das idades.
 
 Utilização de `if` e `else` para condições de desempate pelo `id`.
+
+
+### E12.js:
+Utilização do objeto que seria usado (pessoa).
+
+Criação da função deletar que recebe um objeto pelo parâmetro campos juntamente com o método delete para excluir um campo dentro do objeto.
+
+Chamada da função passando pessoa e retornando o objeto já alterado.
