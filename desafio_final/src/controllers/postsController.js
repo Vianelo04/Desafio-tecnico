@@ -21,8 +21,26 @@ const obterPosts = async (req, res) => {
 
         return res.status(200).json(post);
     } catch (error) {
-        return res.status(500).json({ erro: 'erro ao listar post'});
+        return res.status(500).json({ erro: 'erro ao obter post'});
     }
 };
 
-module.exports = { listarPosts, obterPosts };
+const cadastrarPosts = async (req, res) => {
+    const { autor, conteudo } = req.body;
+
+    if (!autor || !conteudo) {
+        return res.status(400).json({ erro: 'autor e conteudo são obrigatórios'});
+    }
+
+    try {
+        const [post] = await connection('posts')
+            .insert({ autor, conteudo })
+            .returning('*');
+
+        return res.status(201).json(post);
+    } catch (error) {
+        return res.status(500).json({ erro: 'erro ao cadastrar post'});
+    }
+};
+
+module.exports = { listarPosts, obterPosts, cadastrarPosts };
