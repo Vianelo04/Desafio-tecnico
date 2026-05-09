@@ -43,4 +43,20 @@ const cadastrarPosts = async (req, res) => {
     }
 };
 
-module.exports = { listarPosts, obterPosts, cadastrarPosts };
+const deletarPost = async (req, res) => {
+    const { id } = req.params;
+
+    try{
+        const linhasAfetadas = await connection('posts').where({ id }).del();
+
+        if (linhasAfetadas === 0) {
+            return res.status(404).json({ erro: 'post não encontrado'});
+        }
+
+        return res.status(204).send();    
+    } catch (erro) {
+        return res.status(500).json({ erro: 'erro ao deletar post' });
+    }
+};
+
+module.exports = { listarPosts, obterPosts, cadastrarPosts, deletarPost };
