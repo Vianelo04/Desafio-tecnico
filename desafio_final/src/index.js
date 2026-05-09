@@ -4,6 +4,11 @@ const express = require('express')
 const app = express();
 const port = process.env.PORT;
 
+const postsRoutes = require('./routes/postsRoutes');
+
+app.use(express.json());
+app.use('/posts', postsRoutes);
+
 app.get('/', (req, res) => {
     res.send("API rodando 1234");
 });
