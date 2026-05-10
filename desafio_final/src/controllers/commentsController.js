@@ -19,4 +19,28 @@ const listarComentariosPost = async (req, res) => {
     }
 };
 
-module.exports = { listarComentariosPost };
+const criarComentario = async (req, res) => {
+    const { postId } = req.params;
+    const { texto, autor } = req.body;
+
+    if (!texto || !autor) {
+        return res.status(400).json({ erro: 'texto e autor são obrigatórios'});
+    }
+
+    try {
+        const post = await connection('posts').where({ id: postId }).first();
+        if (!post) {
+            return res.status(404).json({ erro: 'post não encontrado'});
+        }
+
+        const [comentario] = await connection('comments')
+            .insert({ post_id: postId, texto, autor})
+            .returning('*');
+
+        return res.status(201).json(comentario);
+    } catch (erro) {
+        return res.status(500).json({ erro: 'erro ao cadastrar comentário'});
+    }
+};
+
+module.exports = { listarComentariosPost, criarComentario };
