@@ -3,7 +3,7 @@ const pessoa = {
     sobrenome: "smart",
     idade: "26",
     cargo: "analista de sistemas",
-    documento: "123.3456.678-90"
+    documento: "123.345.678-90"
 }
 
 function deletar(campos) {

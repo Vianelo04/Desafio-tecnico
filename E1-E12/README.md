@@ -54,6 +54,8 @@ Utilização do `fetch` e `async/await` para requisição HTTPS, `json()` para r
 
 Input para testar com meu CEP e número da minha casa.
 
+Requer internet para rodar ele na hora.
+
 
 ### E7.js:
 Imprime uma mensagem de saudações junto dos nomes (com a primeira letra maiúscula) e sobrenomes de cada objeto dados pelo Array.
