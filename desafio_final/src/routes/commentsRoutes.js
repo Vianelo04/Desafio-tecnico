@@ -1,9 +1,10 @@
 const express = require('express');
-const router = express.Router({ mergeParams: true });
+const router = express.Router();
 const commentsController = require('../controllers/commentsController');
 
-router.get('/', commentsController.listarComentariosPost);
-router.post('/', commentsController.criarComentario);
+router.get('/posts/:postId/comments', commentsController.listarComentariosPost);
+router.post('/posts/:postId/comments', commentsController.criarComentario);
+router.delete('/comments/:id', commentsController.deletarComentario);
 
 
 module.exports = router;

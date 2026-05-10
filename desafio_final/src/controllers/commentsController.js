@@ -43,4 +43,20 @@ const criarComentario = async (req, res) => {
     }
 };
 
-module.exports = { listarComentariosPost, criarComentario };
+const deletarComentario = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const linhasAfetadas = await connection('comments').where({ id }).del();
+
+        if (linhasAfetadas === 0) {
+            return res.status(404).json({ erro: 'comentário não encontrado'});
+        }
+
+        return res.status(204).send();
+    } catch (erro) {
+        return res.status(500).json({ erro: 'erro ao deletar comentário'});
+    }
+};
+
+module.exports = { listarComentariosPost, criarComentario, deletarComentario };

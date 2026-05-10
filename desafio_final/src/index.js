@@ -9,7 +9,7 @@ const commentsRoutes = require('./routes/commentsRoutes')
 
 app.use(express.json());
 app.use('/posts', postsRoutes);
-app.use('/posts/:postId/comments', commentsRoutes);
+app.use(commentsRoutes);
 
 app.get('/', (req, res) => {
     res.send("API rodando 1234");
